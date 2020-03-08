@@ -1,0 +1,24 @@
+/* pages/group/changeMaster.wxss */
+@import "group.wxss";
+page{
+    height:100%;
+}
+.chooseIcon{
+    width:40rpx;
+    height:30rpx;
+    margin-right:40rpx;
+}
+.groupMsg{
+    flex:0 0 70%;
+}
+.editButton {
+    width: 90%;
+    height: 98rpx;
+    margin: 40rpx 0;
+    text-align: center;
+    line-height: 98rpx;
+    color: #fff;
+    background: #5095FA;
+    border-radius: 8rpx;
+    border: 2rpx solid rgba(5,5,5,0.08);
+}

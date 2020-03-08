@@ -1,0 +1,273 @@
+/* pages/card/createCard.wxss */
+
+page {
+  background: #f3f2f7;
+}
+
+.container {
+  font-size: 34rpx;
+  color: #666;
+}
+
+.cardTitle {
+    color:#333;
+}
+
+.baseMsg {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0 20rpx 5%;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.avatar {
+  width: 130rpx;
+  height: 130rpx;
+  border: 1px solid #e5e5e5;
+}
+
+.baseContent {
+  margin-left: 20rpx;
+  width: 78%;
+  position: relative;
+}
+
+.baseContent input {
+  height: 80rpx;
+  width:75%;
+  line-height: 65rpx;
+}
+
+.baseContent input:nth-child(1) {
+  border-bottom: 1px solid #e5e5e5;
+  width:100%;
+}
+
+.checkCode,.verView {
+  position: absolute;
+  bottom: 5rpx;
+  right: 20rpx;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+.verIcon{
+    width:40rpx;
+    height:44rpx;
+}
+.checkCode{
+  color: #fff;
+  background: #5095FA;
+  border-radius: 10rpx;
+  height:60rpx;
+  line-height:40rpx;
+  font-size:32rpx;
+}
+.sendCode {
+  background: #b5b5b5;
+}
+
+.submitButton {
+  width: 120rpx;
+  height: 60rpx;
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+  background: #5095FA;
+  border-radius: 10rpx;
+  z-index: 2;
+}
+
+.cardMsg {
+  margin-top: 30rpx;
+}
+
+.verification-code {
+  width: 100%;
+  height: 96rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.verContent {
+  width: 100%;
+  height: 96rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.verification-code>view>input {
+  width: 60%;
+  margin-right:142rpx;
+}
+
+.verification-code, .cardMsg {
+  width: 100%;
+  padding-left: 5%;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.cardMsg>view>text {
+  width: 20%;
+}
+
+.cardMsg input {
+  width: 78%;
+}
+
+.cardMsg>view{
+  width: 100%;  
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.cardMsg>view:not(.interestView){
+    height: 96rpx;
+}
+.ownMsg {
+  min-height: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: initial;
+}
+
+.ownMsg>textarea {
+  height: 180rpx;
+  width: 90%;
+}
+.newItemContent>input {
+  width: 60%;
+}
+
+.newItemContent>.cardTitle {
+  width: 25%;
+  font-size: 28rpx;
+  color: #4a90e2;
+}
+
+.addIcon {
+  height: 45rpx;
+  width: 45rpx;
+  margin-right: 20rpx;
+}
+
+.cardMsg>view .addItem {
+  width: 50%;
+}
+
+
+.cardImage {
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.interestView{
+    padding:20rpx 0;
+    box-sizing: border-box;
+    min-height: 98rpx;
+}
+.interestContent {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.interestContent>view {
+  padding: 5rpx 19rpx;
+  margin: 10rpx 0 0 10rpx;
+  background: #e7e7e7;
+  border-radius: 50rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.icon {
+  width: 16rpx;
+  height: 26rpx;
+  margin-right: 20rpx;
+}
+
+.imageContent {
+  width:100%;
+  display: flex;
+  align-items: center;
+  padding-left:5%;
+  background: #fff;
+  min-height:250rpx;
+  box-sizing: border-box;
+}
+.imageInfo{
+  width:75%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left:80rpx;
+}
+.imageView {
+  margin:20rpx 45rpx 20rpx 0;
+  position:relative;
+}
+.delImg{
+  width:32rpx;
+  height:32rpx;
+  position:absolute;
+  top:-16rpx;
+  right:-16rpx;
+}
+.newImage {
+  width: 130rpx;
+  height: 130rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:20rpx 45rpx 20rpx 0;
+  background: #efeff4;
+}
+
+.newImg {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.editButton {
+  width: 90%;
+  height: 98rpx;
+  text-align: center;
+  line-height: 98rpx;
+  color: #fff;
+  background: #5095FA;
+  border-radius: 8rpx;
+  border: 2rpx solid rgba(5,5,5,0.08);
+  margin-top:21rpx;
+}
+.needIcon{
+    color:red;
+}
+
+.shareContent {
+    width: 100%;
+    height: 140rpx;
+    position: fixed;
+    left: 0rpx;
+    bottom: 0rpx;
+    display: flex;
+    justify-content: center;
+    background: #f9f9f9;
+  }
+
+  .white {
+    width: 100%;
+    height: 140rpx;
+  }

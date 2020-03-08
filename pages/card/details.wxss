@@ -1,0 +1,58 @@
+/**app.wxss**/
+
+page {
+  background: #F3F2F7;
+  padding-bottom: 130rpx;
+}
+.bgBlock{position: absolute;top:0;left:0;width:100%;height:100rpx;background:#37363D}
+.bgBlock .leftangle{ position: absolute;  width:0;  height:0; border-top: 30px solid #37363D;border-left: 30px solid transparent; top:100rpx;left:0}
+.bgBlock .rightangle{ position: absolute;  width:0;  height:0; border-top: 30px solid #37363D;border-right: 30px solid transparent; top:100rpx;right:0}
+ .infoCon{box-shadow: 0 0 8px 0 rgba(178,178,178,0.40);border-radius: 16rpx;position: relative;background:#fff;margin:30rpx;padding:40rpx;} 
+ .scanHeader{position: absolute;width:190rpx;height:190rpx;z-index: 9;top:30rpx;right:20rpx;}
+  .scanHeader .scan{width:100%;height:100%;}
+  .scanHeader .cover{position:absolute;
+width:88rpx;
+height:88rpx;
+top:53rpx;
+left:52rpx;
+border-radius:50%;
+}
+ .infoTop{padding-bottom:30rpx;}
+.pd50{padding-bottom:40rpx;}
+.infoTop .t-each{margin-bottom:20rpx;max-width:70%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.infoTop .t-each .name{font-size: 50rpx;margin-right:10rpx;line-height: 50rpx;max-width:300rpx;display:inline-block;
+overflow:hidden;text-overflow: ellipsis;white-space:nowrap;
+}
+.infoCon .i-eachitems{position: relative;padding:7px 0 7px 70rpx;}
+.infoCon{color:#666666;font-size: 32rpx;line-height: 40rpx;min-height:150rpx; overflow:hidden;}
+.infoCon .icons{width:35rpx;height:35rpx;position: absolute;left:0;opacity: 0.8}
+
+.infoCon .labelcons .icon{background: #e7e7e7;margin-right:15rpx;height:40rpx;line-height: 40rpx;border-radius: 20rpx;padding:0 20rpx;font-size: 28rpx;color:#666;margin-bottom:15rpx;display: inline-block;}
+
+.companyCon{background:#fff;padding:40rpx;box-shadow:0 0 8px 0 rgba(178,178,178,0.40);
+border-radius:16rpx;margin:30rpx;}
+.comHeader .eachitems{display: flex;padding-bottom:40rpx;position: relative}
+.comHeader .eachitems .header{width:120rpx;height:120rpx;margin-right:30rpx;}
+.comHeader .eachitems .details{font-size: 28rpx;color:#666;overflow:hidden;flex: 1}
+.comHeader .eachitems .com{font-size: 38rpx;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.comHeader .eachitems  .pos{background: #e7e7e7;padding:0 20rpx;height:40rpx;line-height: 40rpx;border-radius: 10rpx;margin-top:20rpx;display: inline-block;color:#999}
+.comHeader .eachitems .iconsChange{position: absolute;width:48rpx;height:48rpx;right:0;top:46rpx;}
+.companyDis{font-size: 30rpx;line-height: 50rpx;}
+ .swiperCon{width:100%;overflow:hidden;height: 700rpx;margin:20rpx 0 0rpx;} 
+ .swiperCon swiper {height:100%;}
+.swiperCon image {width:100%;height:100%}
+.optCon{display: flex;color:#666;font-size: 34rpx;position: fixed;bottom:0;width:100%;background: rgba(255,255,255,0.9);box-shadow: 0 0 3rpx #999;padding:0 20rpx;box-sizing: border-box}
+.optCon .eachopt{height:82rpx;flex: 1;line-height: 82rpx;display: flex;align-items: center;justify-content: center;margin:20rpx 20rpx 30rpx;font-size: 34rpx;padding:0;}
+.optCon .eachopt.greenbg{background:#5095FA;color:#fff;border-radius: 10rpx;}
+.optCon .eachopt.Whitebg{background:#fff;color:#666;border-radius: 10rpx;}
+
+.optCon .eachopt .ics{width:45rpx;height:45rpx;margin-right:10rpx;}
+.gotoMain{position: fixed;right:37rpx;bottom:180rpx;width:80rpx;height:80rpx;border-radius: 50%;overflow: hidden;box-shadow: 0 0 8rpx #666;font-size:28rpx;
+line-height:80rpx;
+text-align:center;
+color:#999;
+}
+.gotoMain image{width:100%;height:100%;display: block}
+button::after{border:0}
+.deleteOpt{width:60rpx;margin:20rpx 10rpx;text-align: center}
+.deleteOpt image{width:40rpx;height:40rpx;display: inline-block;margin-top:20rpx;}

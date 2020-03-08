@@ -1,0 +1,28 @@
+<!--pages/index/insterest.wxml-->
+<view class="container">
+  <view class="interestView">
+    <block wx:for="{{interest}}">
+      <view class="interestPart {{item.state?'checkInterest':'interestFont'}}" bindtap="clickInterest" data-id="{{index}}">{{item.name}}
+        <block wx:if="{{item.delState}}">
+          <image src="../../images/customIcon-del.png" class="delIcon" catchtap="delInterest" data-id="{{index}}"></image>
+        </block>
+      </view>
+
+    </block>
+    <view class="interestPart addFont" bindtap="addInterest">添加 +</view>
+  </view>
+
+  <block wx:if="{{addView}}">
+    <view class="backView">
+      <view class="addView">
+        <text class="addTitle">自定义标签</text>
+        <view class="addInput">
+          <input type="text" placeholder="最多10个字" value="" bindinput="getName" maxlength="10"></input>
+        </view>
+        <text class="addButton" bindtap="cancelSubmit">取消</text>
+        <text class="addButton okButton" bindtap="addSubmit">确定</text>
+      </view>
+    </view>
+  </block>
+  <view class="editButton" bindtap="{{disable?'saveInterest':''}}">保存</view>
+</view>

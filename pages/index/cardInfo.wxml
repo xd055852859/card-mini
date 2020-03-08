@@ -1,0 +1,117 @@
+<!--pages/card/details.wxml-->
+<view class='infoCon'>
+
+
+        <view class='infoTop pd50'>
+                <view class='t-each'>
+                  <text class='name'>{{user.nickName}}</text>{{cards["1000"].itemContent.post}}</view>
+                <view class='t-each'>{{cards["1000"].itemContent.orgName}}</view>
+              </view>
+    
+    <view class="code">
+        <image src="{{user.originQRCodeURL}}" class="codeImage"></image>
+        <image src="{{user.avatar}}" class="avatarImage" mode="aspectFill"></image>
+    </view>
+    <view class='i-eachitems' wx:if="{{cards[1].itemContent.value}}">
+        <image mode="aspectFit" class='icons' src="../../images/phone.png"></image>{{cards[1].itemContent.value}}</view>
+    <view class='i-eachitems' wx:if="{{cards[2].itemContent.value}}">
+        <image mode="aspectFit" class='icons' src="../../images/email.png"></image>{{cards[2].itemContent.value}}</view>
+    <view class='i-eachitems' wx:if="{{cards[3].itemContent.value}}">
+        <image mode="aspectFit" class='icons' src="../../images/telephone.png"></image>{{cards[3].itemContent.value}}</view>
+    <view class='i-eachitems' wx:if="{{cards[4].itemContent.value}}">
+        <image mode="aspectFit" class='icons' src="../../images/position.png"></image>{{cards[4].itemContent.value}}</view>
+    <view class='i-eachitems' wx:if="{{cards[5].itemContent.value}}">
+        <image mode="aspectFit" class='icons' src="../../images/qq.png"></image>{{cards[5].itemContent.value}}</view>
+    <view class='i-eachitems' wx:if="{{cards[6].itemContent.value}}">
+        <image mode="aspectFit" class='icons' src="../../images/webchat.png"></image>{{cards[6].itemContent.value}}</view>
+    <view class='i-eachitems' wx:if="{{cards[7].itemContent.value}}">
+        <image mode="aspectFit" class='icons' src="../../images/skype.png"></image>{{cards[7].itemContent.value}}</view>
+    <view class='i-eachitems' wx:if="{{cards[8].itemContent.value}}">
+        <image mode="aspectFit" class='icons' src="../../images/sina.png"></image>{{cards[8].itemContent.value}}</view>
+    <view class='i-eachitems' wx:if="{{cards[9].itemContent.value}}">
+        <image mode="aspectFit" class='icons' src="../../images/twitter.png"></image>{{cards[9].itemContent.value}}</view>
+    <view class='i-eachitems' wx:if="{{cards[10].itemContent.value}}">
+        <image mode="aspectFit" class='icons' src="../../images/Facebook.png"></image>{{cards[10].itemContent.value}}</view>
+    <view class='i-eachitems' wx:if="{{cards[11].itemContent.value}}">
+        <image mode="aspectFit" class='icons' src="../../images/sign.png"></image>{{cards[11].itemContent.value}}</view>
+    <view class='i-eachitems signWidth' wx:if="{{user.declaration}}">
+        <image mode="aspectFit" class='icons' src="../../images/sign.png"></image>{{user.declaration}}</view>
+    <block wx:for="{{cards}}">
+        <block wx:if="{{index<1000&& index>499}}">
+            <view class='i-eachitems'>
+                <image mode="aspectFit" class='icons' src="../../images/email.png"></image>{{item.itemContent.value}}</view>
+        </block>
+    </block>
+    <block wx:if="{{user.favs&&user.favs.length>0}}">
+        <view class='i-eachitems'>
+            <image mode="aspectFit" class='icons' src="../../images/label.png"></image>
+            <view class='labelcons'>
+                <block wx:for="{{user.favs}}">
+                    <view class='icon'>{{item.name}}</view>
+                </block>
+            </view>
+        </view>
+    </block>
+    <view class="changeButton" catchtap="modifyCard">
+        <image src="../../images/edit.png" class="changeIcon"></image>
+    </view>
+</view>
+<!-- wx:if="{{dataDetails.RS2.length>0}}" -->
+
+
+<block wx:for="{{cards}}">
+    <block wx:if="{{index>1000}}">
+        <view class='infoCon'>
+            <view class='infoTop pd50'>
+                <view class='t-each'>
+                    <text class='name'>{{item.itemContent["1"].value}}</text>
+                </view>
+                <view class='t-each'>{{item.itemContent["2"].value}}</view>
+            </view>
+            <view class='i-eachitems' wx:for="{{item.itemContent}}" wx:key="*this" wx:if="{{index!=1&&index!=2}}">
+                <image mode="aspectFit" class='icons' src="../../images/label.png"></image>
+                {{item.name}}： {{item.value}}
+            </view>
+
+            <view class="changeButton" catchtap="modifyNewCard" data-id="{{index}}">
+                <image src="../../images/edit.png" class="changeIcon"></image>
+            </view>
+        </view>
+
+    </block>
+</block>
+
+
+
+
+
+
+
+
+<view class="addCard" bindtap="toNewCard">新增角色</view>
+<!-- <view class='companyCon'>
+  <view class='comHeader'>
+    <view class='eachitems'>
+      <image src='http://cdn-icare.qingtime.cn/a1ce4bf7-976d-4fda-b969-1dcd7fa551a3.jpg?imageMogr2/auto-orient/format/jpeg' class='header'></image>
+      <view class='details'>
+        <view class="com">阿里巴巴（中国）网络技术有限公司</view>
+        <view class='pos'>董事长</view>
+      </view>
+    </view>
+    <view class='companyDis'>
+      江苏时光信息科技有限公司（时光科技®）成立于2014年5月， 英文名Qingtime，是一家融合东方人文精神和西方硅谷创新气质的现代高科技企业，公司除软件研发中心外，另设谱牒研究中心（位于常州家谱馆）、基因研究中心（位于杭州浙江大学生命科学院），拥有来自中国科大、浙江大学等知名院校的科研管理团队。公司是全球最大的家谱公益机构美国犹他家谱学会（FamilySearch.org）的战略合作方，将流失海外各地的家谱在重新带回中国，正成为全球顶尖的华人祖源与文化大数据研究中心。
+    </view>
+
+  </view> 
+</view>-->
+<!-- <block wx:if="{{user.picture.length>0}}">
+    <view class='swiperCon'>
+        <swiper autoplay="true" indicator-dots="false" interval="5000" duration="1000" indicator-color="rgba(255,255,255,0.40)" indicator-active-color="rgba(255,255,255,0.90)">
+            <block wx:for="{{user.picture}}" wx:key="{{*this}}">
+                <swiper-item>
+                    <image mode="aspectFill" src="{{item}}"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</block> -->

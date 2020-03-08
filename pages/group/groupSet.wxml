@@ -1,0 +1,31 @@
+<!--pages/group/groupSet.wxml-->
+<view class="container">
+    <view class="setContent">
+        <view>
+            <text>向群友公开手机号</text>
+            <switch checked="{{openState}}" bindchange="changeOpen" color="#5095FA"></switch>
+        </view>
+        <block wx:if="{{ownerState&&memberSum>1}}">         
+                <view bindtap="toChangeMaster">
+                    <text>移交管理权限</text>
+                    <view class="masterView">
+                        <image class="masterImage" src="{{avatar}}" mode="aspectFill"></image>
+                        <image class="icon" src="../../images/arrow-right.png"></image>
+                    </view>
+                </view>
+                <view bindtap="toOutMember">
+                    <text>移除群成员</text>
+                    <view class="masterView">
+                        <image class="icon" src="../../images/arrow-right.png"></image>
+                    </view>
+                </view>
+        </block>
+    </view>
+    <view class="emptyView">
+            <image class="emptyImage" src="../../images/emptyGroup.png"></image>
+        </view>
+    <view class="buttonView">
+        <view class="saveButton" bindtap="saveGroup"><image src="../../images/saveSet.png" class="ics"></image>保存</view>
+        <view class="outButton" bindtap="outGroup"><image src="../../images/outSet.png" class="ics"></image>退出群组</view>
+    </view>
+</view>

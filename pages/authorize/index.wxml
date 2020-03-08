@@ -1,0 +1,12 @@
+<!--pages/authorize/index.wxml-->
+<view class='guidCon' wx:if="{{showMaster}}">
+ <view class='tipCon'>
+  <view class='title'>获取用户信息</view>
+  <view class='content'>未授权需要允许微信授权后才可以进入小程序进行删除、修改。已授权重新获取用户信息</view>
+  <view class='opt'>
+  <button class='btnopt' open-type='getUserInfo' bindgetuserinfo="getUserHanlder">确认</button>
+  
+  </view>
+ 
+ </view>
+</view>

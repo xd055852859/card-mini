@@ -1,0 +1,44 @@
+<!--pages/card/index.wxml-->
+<view class='searchCon'>
+
+  <view class="s-c-ipt">
+    <image class='sicons' src='../../images/search.png'></image>
+    <input placeholder="搜索" placeholder-class='splace' value="{{searchValue}}"  bindinput='schIptHanlder' />
+    <icon class='iconsClear' wx:if="{{isIptValue}}"  bindtap='clearIptHanlder' type="clear" size="20" />
+  </view>
+  <view class='s-choose'>
+    <view>搜索范围：</view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio  " wx:for="{{radioArr}}" wx:key="*this"  wx:for-item="rado">
+      <image class='icon' value="{{rado.name}}" src='{{rado.name==radioArrCheck?"../../images/radioon.png":"../../images/radiooff.png"}}'></image>
+        <radio value="{{rado.name}}" checked="{{rado.checked}}" />{{rado.value}}
+      </label>
+    </radio-group>
+  </view>
+
+</view>
+
+
+
+
+<view class='cardCon'>
+ <view class='eachitems' wx:for="{{dataList}}" wx:key="*this">
+ <navigator  url='/pages/card/details?targetUKey={{item.user._key}}' class='navgt' >
+    <view class='header'><image src='{{item.user.avatar}}' mode='aspectFill'></image></view>
+    
+    <view class='details'>
+      <view class='dis'>
+        <view class='name'>{{item.user.nickName}}</view>
+        <view class='pos' wx:if="{{item.mainCard.itemContent.post}}">{{item.mainCard.itemContent.post}}</view>
+      </view>
+       <view class="com">{{item.mainCard.itemContent.orgName}}</view>
+     </view>
+  </navigator>
+   <!-- <view wx:if="true||{{item.isFriend==0}}" class='iconsChange' data-id="{{item.d._key}}" catchtap='changCardHanlder'>交换</view>  -->
+</view>
+
+  <view class='noDataCon' wx:if="{{dataList.length==0}}">
+    <image class='tipImg' src="../../images/nodata.png"></image>
+    <view>收藏亲友名片，更方便地找到他们~</view>
+  </view>
+</view>

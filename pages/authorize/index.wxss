@@ -1,0 +1,10 @@
+/* pages/authorize/index.wxss */
+
+page{background: #999;color:#333}
+.guidCon{background:#fff;width:560rpx;height:350rpx;position: absolute;left:50%;top:50%;margin-left:-280rpx;padding:40rpx 0;margin-top:-250rpx}
+.tipCon{font-size: 28rpx;}
+.tipCon .title{font-weight:700;text-align: center;font-size: 30rpx;margin:40rpx 0}
+.tipCon .content{padding:0rpx 40rpx 40rpx;min-height:120rpx}
+.tipCon .opt{color:green;text-align: center;padding:40rpx;border-top:1px solid #eee;}
+.btnopt{border:0;background:#fff;color:#5095FA;line-height: 50rpx;}
+.btnopt:after{border:0}

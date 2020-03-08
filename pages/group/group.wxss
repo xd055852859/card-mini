@@ -1,0 +1,148 @@
+/* pages/card/group.wxss */
+.container{
+    position: relative;
+}
+.initTitle {
+    margin-top: 150rpx;
+    font-size: 50rpx;
+    color: #666;
+}
+
+.initMsg {
+    margin-top: 20rpx;
+    font-size: 28rpx;
+    color: #999;
+}
+
+.emptyView {
+    width: 100%;
+    height: 290rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 100rpx 0;
+}
+
+.emptyImage {
+    width: 279rpx;
+    height: 238rpx;
+    margin-bottom: 15rpx;
+}
+
+.emptyText {
+    font-size: 32rpx;
+    color: #B2B2B2;
+}
+
+button[plain],.shareTop {
+    width: 90%;
+    height: 94rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #5095FA;
+    font-size: 34rpx;
+    color: #fff;
+    border: 2rpx solid rgba(5, 5, 5, 0.08);
+    border-radius: 10rpx;
+    margin-top:21rpx;
+}
+.shareTop{
+    position: absolute;
+    z-index:2;
+    left:5%;
+    bottom:0rpx;
+    background: transparent;
+    border:0rpx;
+}
+.createView {
+    width: 100%;
+    height: 200rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f3f2f7;
+}
+
+.groupContent {
+    width: 100%;
+}
+
+.group {
+    width: 95%;
+    height: 126rpx;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.groupImage {
+    width: 90rpx;
+    height: 90rpx;
+    border: 1px solid #efefef;
+    display: flex;
+   
+}
+.iconView{
+    display: flex;
+    flex: 0 0 33%;
+    align-items: center;
+    justify-content: center;
+}
+.flex1{
+    justify-content: center;
+    align-items: center;
+}
+.flex2{
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+.groupIcon{
+    width:28rpx;
+    height:28rpx;
+}
+.flex3{
+    flex: 0 0 50%;
+}
+.flex4{
+    flex: 0 0 33%;
+}
+.icon1{
+    width:38rpx;
+    height:38rpx;
+}
+.icon2{
+    width:32rpx;
+    height:32rpx;
+}
+.icon3{
+    width:28rpx;
+    height:28rpx;
+}
+.groupMsg {
+    height: 90rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 75%;
+    margin-left: 24rpx;
+}
+
+.groupName {
+    height: 56rpx;
+    line-height: 56rpx;
+    font-size: 36rpx;
+    color: #222;
+    width:90%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+
+.groupNum {
+    font-size: 26rpx;
+    color: #999;
+}

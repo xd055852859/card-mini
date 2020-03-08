@@ -1,0 +1,53 @@
+<!--pages/card/groupDetail.wxml-->
+<view class="container">
+    <view class="group groupInfo">
+        <view class="groupImage {{iconArray.length!=1?'flex2':'flex1'}}" >
+            <block wx:for="{{iconArray}}">
+                <view class="iconView {{iconArray.length==9?'flex4':'flex3'}}">
+                    <image src="{{item}}" class="groupIcon {{iconArray.length==1?'icon1':(iconArray.length==4?'icon2':'icon3')}}" mode="aspectFill"></image>
+                </view>
+            </block>
+        </view>
+    
+
+
+
+
+        <view class="groupMsg groupInfoMsg">
+            <open-data class="groupInfoName" open-gid="{{gId}}" type="groupName"></open-data>
+            <view class="groupNum groupInfoNum">已有 {{memberSum}} 位群成员</view>
+        </view>
+        <!-- <block wx:if="{{ownerState}}"> -->
+        <view bindtap="toGroupSet">
+            <image class="setIcon" src="../../images/set.png"></image>
+        </view>
+        <!-- </block> -->
+    </view>
+    <view class="groupMemberContent">
+        <view class="search">
+            <input placeholder='搜索群内成员' class="searchInput" bindinput="searchGroupMember" />
+        </view>
+        <view class="groupContent">
+            <block wx:for="{{groupMemberList}}">
+                <view class="group" bindtap="toGroupDetail" data-isopen="{{item.isOpen}}" data-userid="{{item.userKey}}">
+                    <image class="groupImage" src="{{item.avatar}}" mode="aspectFill"></image>
+                    <view class="groupMsg">
+                        <view class="groupName">{{item.nickName}} <text class="groupNum">{{item.mainCard.itemContent.post}}</text></view>
+                        <view class="groupNum">{{item.mainCard.itemContent.orgName}} </view>
+                    </view>
+                </view>
+            </block>
+            <view class="white">
+            </view>
+        </view>
+    </view>
+    <view class="shareContent">
+        <button open-type="share" plain="true">
+             <image class="ics" src="../../images/share.png"></image>发到微信群
+        </button>
+    </view>
+
+    <navigator url='/pages/index/index' open-type="switchTab" class='gotoMain'>
+        <image wx:if="{{userInfo.user.avatar}}" class='ics' src='{{userInfo.user.avatar}}' mode="aspectFill"></image>
+    </navigator>
+</view>

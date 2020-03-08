@@ -1,0 +1,63 @@
+<!--pages/index/newCard.wxml-->
+<view class="container">
+    <view class="cardMsg">
+        <view>
+            <text class="cardTitle">公司 <text class="needIcon">*</text></text>
+            <input placeholder='请输入公司' value="{{cardMsg['1'].value}}" data-id="1" bindinput="getName" data-name="公司" maxlength="15"></input>
+        </view>
+        <view>
+            <text class="cardTitle">职务  <text class="needIcon">*</text></text>
+            <input placeholder='请输入职务' value="{{cardMsg['2'].value}}" data-id="2" bindinput="getName" data-name="职务" maxlength="10"></input>
+        </view>
+        <view>
+            <text class="cardTitle">固话  <text class="needIcon">*</text></text>
+            <input placeholder='请输入号码' value="{{cardMsg['3'].value}}" data-id="3" bindinput="getName" data-name="固话" maxlength="15"></input>
+        </view>
+        <view>
+            <text class="cardTitle">地址  <text class="needIcon">*</text></text>
+            <input placeholder='请输入地址' value="{{cardMsg['4'].value}}" data-id="4" bindinput="getName" data-name="地址" maxlength="15"></input>
+        </view>
+        <block wx:if="{{newCard}}">
+            <block wx:for="{{newCard}}">
+                <view class="newItemContent">
+                    <image src="../../images/customIcon-del.png" class="addIcon" bindtap="delItem" data-target="newItem" data-id="{{index}}"></image>
+                    <text class="cardTitle">{{item.name}}</text>
+                    <image class="icon" src="../../images/arrow-right.png"></image>
+                    <input placeholder='请输入{{item.name}}' bindinput="getName" data-id="{{index}}" data-target="new" data-name="{{item.name}}"
+                        value="{{item.value}}" maxlength="15"></input>
+                </view>
+            </block>
+        </block>
+        <block wx:if="{{customCard}}">
+            <block wx:for="{{customCard}}">
+                <view class="newItemContent">
+                    <image src="../../images/customIcon-del.png" class="addIcon" bindtap="delItem" data-target="customItem" data-id="{{index}}"></image>
+                    <text class="cardTitle">{{item.name}}</text>
+                    <image class="icon" src="../../images/arrow-right.png"></image>
+                    <input placeholder='请输入{{item.name}}' bindinput="getName" data-id="{{index}}" data-target="new" data-name="{{item.name}}"
+                        value="{{item.value}}" maxlength="15"></input>
+                </view>
+            </block>
+        </block>
+
+
+        <view bindtap="{{addCardDisable?'addItem':''}}">
+            <image src="../../images/customIcon-add.png" class="addIcon"></image>
+            <text class="addItem cardTitle">添加条目</text>
+        </view>
+    </view>
+    <view class="newItem">
+        <text class="cardTitle">是否可见</text>
+        <switch checked="{{visibleState}}" bindchange="changeState" data-target="defaultVisible" color="#5095FA"></switch>
+    </view>
+    <view class="newItem">
+        <text class="cardTitle">是否现任</text>
+        <switch checked="{{incumbentState}}" bindchange="changeState" data-target="incumbent" color="#5095FA"></switch>
+    </view>
+    <block wx:if="{{cardId}}">
+        <view bindtap="delCard" class="delView">
+            <image src="../../images/cardDel.png" class="delButton"></image>删除此角色
+        </view>
+    </block>
+    <view class="editButton" bindtap="saveNewCard">保存</view>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/index/newItem.wxml-->
+<view class="container">
+    <view class="itemContent">
+        <block wx:for="{{newItemArray}}">
+            <view bindtap="chooseItem" data-id="{{index}}">
+                <text>{{item.name}}</text>
+                <block wx:if="{{item.state}}">
+                    <image class="chooseIcon" src="../../images/right.png"></image>
+                </block>
+            </view>
+        </block>
+    </view>
+    <view class="customItemContent">
+        <view bindtap="addItem">
+            <image src="../../images/customIcon-add.png" class="customIcon"></image>自定义</view>
+        <block wx:for="{{customArray}}">
+            <view>
+                <image src="../../images/customIcon-del.png" class="customIcon" data-id="{{index}}" bindtap="delItem"></image>
+                <input placeholder='请输入自定义项' data-id="{{index}}" bindinput="getName" value="{{item.name}}" maxlength="10"/>
+            </view>
+        </block>
+    </view>
+    <view class="editButton" bindtap="{{disable?'saveItem':''}}">保存</view>
+</view>

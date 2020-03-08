@@ -1,0 +1,35 @@
+<!--pages/index/share.wxml-->
+<view class="container">
+        <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="test"> </button> -->
+        <view class="personMsg" bindtap="{{userInfo.user?'toCardInfo':''}}">
+            <view class="personCard">
+                <view class="baseMsg">
+                    <view class="nameView">
+                        <view class="personName">{{userInfo.user.nickName?userInfo.user.nickName:"姓名"}}</view>
+                        <view class="personPost">{{userInfo.cards['1000'].itemContent.post?userInfo.cards['1000'].itemContent.post:"暂无职位信息"}}</view>
+                    </view>
+                    <view class="personOrgName">{{userInfo.cards['1000'].itemContent.orgName?userInfo.cards['1000'].itemContent.orgName:"暂无公司信息"}}</view>
+                    <!-- <view class="code">
+                <image src="{{userInfo.user.originQRCodeURL}}" class="codeImage"></image>
+            </view> -->
+                    <view class="code">
+                        <image src="{{userInfo.user.originQRCodeURL}}" class="codeImage" mode="aspectFill"></image>
+                        <image src="{{userInfo.user.avatar}}" class="avatarImage" mode="aspectFill"></image>
+                    </view>
+                </view>
+                <view class="baseView">
+                    <view>
+                        <image class="icon" src="../../images/phone.png" mode="widthFix" />*******</view>
+                    <view>
+                        <image class="icon" src="../../images/email.png" mode="widthFix" />*******</view>
+                    <view>
+                        <image class="icon" src="../../images/position.png" mode="widthFix" />********</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="footerContent">
+        <view class="shareView">
+            <button open-type="share" plain="true">信息已加密,请分享</button>
+        </view>
+    </view>

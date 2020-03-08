@@ -1,0 +1,62 @@
+/* pages/index/newItem.wxss */
+
+page {
+  background: #f3f2f7;
+  font-size: 34rpx;
+}
+
+.itemContent {
+  width: 100%;
+  padding-left: 5%;
+  box-sizing: border-box;
+  background: #fff;
+  color:#333;
+}
+
+.itemContent>view {
+  width: 100%;
+  height: 96rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.chooseIcon{
+  width:40rpx;
+  height:30rpx;
+  margin-right:40rpx;
+}
+.customItemContent {
+  min-height: 330rpx;
+  margin-top: 20rpx;
+  width: 100%;
+}
+
+.customItemContent>view {
+  width: 100%;
+  height: 98rpx;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  box-sizing: border-box;
+}
+
+.customIcon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.editButton {
+  width: 90%;
+  height: 98rpx;
+  margin: 40rpx 0;
+  text-align: center;
+  line-height: 98rpx;
+  color: #fff;
+  background: #5095FA;
+  border-radius: 8rpx;
+  border: 2rpx solid rgba(5,5,5,0.08);
+}

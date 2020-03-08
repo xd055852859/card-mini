@@ -1,0 +1,127 @@
+<!--pages/card/createCard.wxml-->
+<view class="container">
+    <view class="baseMsg">
+        <image class="avatar" src="{{userInfo.user.avatar}}" bindtap="chooseAvatar" mode="aspectFill"></image>
+        <view class="baseContent">
+            <input placeholder='请输入姓名' value="{{userInfo.user.nickName}}" data-target="nickName" bindinput="getName" maxlength="10"></input>
+            <input placeholder='请输入手机' disabled="{{verState}}" value="{{personMsg['1'].value}}" data-id="1" bindinput="getName" data-name="mobile"
+                maxlength="15"></input>
+            <block wx:if="{{verState}}">
+                <view class="verView">
+                    <image src="../../images/verIcon.png" class="verIcon"></image>
+                </view>
+            </block>
+            <block wx:else>
+                <block wx:if="{{codeState==0}}">
+                    <button open-type="getPhoneNumber" class="checkCode" bindgetphonenumber="getphonenumber">获取</button>
+                </block>
+                <block wx:else>
+                    <button class="checkCode {{codeState==2?'sendCode':''}}" bindtap="{{codeState==1?'sendVercode':''}}">{{codeState==1?'验证':'已发送验证码('+num+')'}}</button>
+                </block>
+                <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="test"> </button> -->
+            </block>
+
+        </view>
+    </view>
+    <block wx:if="{{codeViewState}}">
+        <view class="verification-code">
+            <view class="verContent">
+                <text class="cardTitle">验证码</text>
+                <input placeholder='请输入验证码' data-target="verCode" bindinput="getName" maxlength="4"></input>
+            </view>
+            <block wx:if="{{verSubmitState}}">
+                <view class="submitButton" catchtap="submitCode">确定</view>
+            </block>
+        </view>
+    </block>
+    <view class="cardMsg">
+        <view>
+            <text class="cardTitle">公司 <text class="needIcon">*</text>
+            </text>
+            <input placeholder='请输入公司' value="{{mainCardMsg['1000'].orgName}}" data-id="1000" data-target="orgName" bindinput="getName"
+                maxlength="15"></input>
+        </view>
+        <view>
+            <text class="cardTitle">职务 <text class="needIcon">*</text>
+            </text>
+            <input placeholder='请输入职务' value="{{mainCardMsg['1000'].post}}" data-id="1000" data-target="post" bindinput="getName" maxlength="10"></input>
+        </view>
+        <view>
+            <text class="cardTitle">邮箱</text>
+            <input placeholder='请输入邮箱' value="{{personMsg['2'].value}}" data-id="2" bindinput="getName" data-name="email" maxlength="25"></input>
+        </view>
+        <view>
+            <text class="cardTitle">固话 </text>
+            <input placeholder='请输入号码' value="{{personMsg['3'].value}}" data-id="3" bindinput="getName" data-name="telephone" maxlength="15"></input>
+        </view>
+        <view>
+            <text class="cardTitle">地址</text>
+            <input placeholder='请输入地址' value="{{personMsg['4'].value}}" data-id="4" bindinput="getName" data-name="address" maxlength="15"></input>
+        </view>
+        <view bindtap="{{favDisable?'toInterest':''}}" class="interestView">
+            <text class="cardTitle">标签</text>
+            <view class="interestContent">
+                <block wx:if="{{favState==1}}">
+                    <block wx:for="{{fav}}">
+                        <view>{{item.name}}</view>
+                    </block>
+                </block>
+                <block wx:else>
+                    点击添加标签
+                </block>
+            </view>
+            <image class="icon" src="../../images/arrow-right.png"></image>
+        </view>
+        <view class="ownMsg">
+            <text class="cardTitle">签名</text>
+            <textarea placeholder='请简单介绍一下你自己' value="{{userInfo.user.declaration}}" bindinput="getName" data-target="declaration"></textarea>
+        </view>
+        <block wx:if="{{newItem}}">
+            <block wx:for="{{newItem}}">
+                <view class="newItemContent">
+                    <image src="../../images/customIcon-del.png" class="addIcon" bindtap="delItem" data-target="newItem" data-id="{{index}}"></image>
+                    <text class="cardTitle">{{item.name}}</text>
+                    <image class="icon" src="../../images/arrow-right.png"></image>
+                    <input placeholder='请输入{{item.name}}' bindinput="getName" data-id="{{index}}" data-target="new" data-name="{{item.name}}"
+                        value="{{item.value}}" maxlength="15"></input>
+                </view>
+            </block>
+        </block>
+        <block wx:if="{{customItem}}">
+            <block wx:for="{{customItem}}">
+                <view class="newItemContent">
+                    <image src="../../images/customIcon-del.png" class="addIcon" bindtap="delItem" data-target="customItem" data-id="{{index}}"></image>
+                    <text class="cardTitle">{{item.name}}</text>
+                    <image class="icon" src="../../images/arrow-right.png"></image>
+                    <input placeholder='请输入{{item.name}}' bindinput="getName" data-id="{{index}}" data-target="new" data-name="{{item.name}}"
+                        value="{{item.value}}" maxlength="15"></input>
+                </view>
+            </block>
+        </block>
+        <view bindtap="{{addItemDisable?'addItem':''}}">
+            <image src="../../images/customIcon-add.png" class="addIcon"></image>
+            <text class="addItem cardTitle">添加条目</text>
+        </view>
+    </view>
+    <view class="imageContent">
+        <text class="cardTitle">图片</text>
+        <view class="imageInfo">
+            <block wx:for="{{imageArray}}">
+                <view class="imageView">
+                    <image src="{{item}}" class="cardImage" mode="aspectFill"></image>
+                    <image src="../../images/customIcon-del.png" class="delImg" data-id="{{index}}" bindtap="delPicture"></image>
+                </view>
+            </block>
+            <view class="newImage" bindtap="choosePicture">
+                <image src="../../images/newItem-add.png" class="newImg"></image>
+            </view>
+        </view>
+
+    </view>
+    <view class="white">
+    </view>
+    <view class="shareContent">
+        <view class="editButton" bindtap="saveCard">保存</view>
+    </view>
+
+</view>

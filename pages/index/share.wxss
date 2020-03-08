@@ -1,0 +1,14 @@
+/* pages/index/share.wxss */
+
+@import 'index.wxss';
+button[plain] {
+    width: 90%;
+    height: 98rpx;
+    margin: 26rpx 5% 40rpx 5%;
+    text-align: center;
+    line-height: 98rpx;
+    color: #fff;
+    background: #5095FA;
+    border-radius: 8rpx;
+    border: 1px solid rgba(5, 5, 5, 0.08);
+}

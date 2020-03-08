@@ -1,0 +1,11 @@
+<view bindtap='onTap' class='container'>
+    <view><image src="../../images/zhifeiji@1x.png" class="backgroundImg"></image></view>  
+    <view class="container">
+      <!-- <text class="cardName" bindtap="onTap">时光名片</text> -->
+      <image src="../../images/logo@1x.png" class="homeLogo"></image>
+    </view>      
+    <view class="cardBottom">
+      <text class="cardTitle">让世界见证真诚的力量。</text>
+      <text>时光出品</text>
+    </view>  
+</view>

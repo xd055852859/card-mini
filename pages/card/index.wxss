@@ -1,0 +1,32 @@
+/* pages/card/index.wxss */
+
+ .swiperCon{width:100%;overflow:hidden;height: 350rpx;} 
+ .swiperCon swiper {height:100%;}
+.swiperCon image {width:100%}
+.searchCon{display: flex;font-size: 24rpx;background:#37363D;color:#fff;padding:2rpx 30rpx 15rpx;align-items: center;box-shadow: 2px 2px 6px 0}
+.searchCon .scan{width:70rpx;height:70rpx;margin-right:30rpx;}
+.searchCon .radio-group{margin:0 30rpx;}
+.searchCon .s-c-ipt {flex: 1;position:relative;}
+.searchCon .s-c-ipt .sicons{width:35rpx;height:38rpx;position: absolute;left:50%;top:18rpx;z-index: 9;margin-left:-76rpx;}
+.searchCon .s-c-ipt .navInput{background:#fff;border-radius: 16rpx;padding-left:20rpx;height:70rpx;line-height: 70rpx;min-height:70rpx;color:#979797;text-align: center;font-size: 34rpx;}
+
+
+.cardCon{padding: 10rpx 0 0;}
+.cardCon .eachCon{position: relative;min-height:126rpx;margin-left:30rpx;}
+.cardCon .eachitems{padding:18rpx 30rpx 18rpx 0em;position: absolute;left:0;top:0;width:100%;box-sizing: border-box;transition: all 0.2s ease-in-out;z-index: 5;background:#fff;height:100%;}
+.cardCon .eachitems:after{ content: ''; display:block; position: absolute; width: 100%; left: 0px; bottom: 0px;height: 1px; background-color: #E5E5E5; -webkit-transform: scaleY(0.5); transform: scaleY(0.5);}
+.cardCon .eachitems .header{width:90rpx;height:90rpx;margin-right:25rpx;overflow: hidden}
+.cardCon .eachitems .header image{width:100%;height:100%}
+.cardCon .eachitems  .navgt{display: flex;}
+.btnDel{background:#fff;display: flex;height:100%;width:140rpx;position: absolute;top:0;
+right:0rpx;align-items: center;background: #FF3B30;color:#fff;text-align: center;
+justify-content: center;line-height: inherit;font-size: 24rpx;z-index: 4;}
+.cardCon .eachitems .details{flex: 1;font-size: 28rpx;flex-direction: column;justify-content: space-between;display:flex;overflow:hidden;}
+.cardCon .eachitems .dis{display: flex;align-items: center;color:#222;}
+.cardCon .eachitems .com{font-size: 26rpx;color:#999;max-width:79%;overflow: hidden;text-overflow: ellipsis;white-space:nowrap;}
+.cardCon .eachitems .dis .name{font-size: 36rpx;margin-right:15rpx;color:#444;max-width:51%;overflow: hidden;text-overflow: ellipsis;white-space:nowrap;}
+.cardCon .eachitems .dis .pos{color:#999;padding:0 10rpx;height:40rpx;line-height: 44rpx;border-radius: 20rpx;max-width:23%;overflow: hidden;white-space:nowrap;text-overflow:ellipsis;}
+.cardCon .eachitems .iconsChange{position: absolute;right:30rpx;top:30rpx;background:#222;width:100rpx;height:50rpx;background:#5095FA;color:#fff;border-radius: 10rpx;font-size: 28rpx;text-align: center;line-height: 50rpx;}
+
+.noDataCon{color:#b2b2b2;font-size: 24rpx;text-align: center;}
+.noDataCon .tipImg{width:292rpx;height:252rpx;margin:60rpx 30rpx 30rpx;}

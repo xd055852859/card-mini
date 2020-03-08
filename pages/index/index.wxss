@@ -1,0 +1,222 @@
+page {
+  background: #F3F2F7;
+}
+
+.container {
+  font-size: 32rpx;
+  color: #666;
+}
+
+.nameView {
+  display: flex;
+  align-items: flex-end;
+}
+
+.personName,
+.personPost,
+.personOrgName {
+  font-size: 50rpx;
+  width: auto;
+  max-width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+.personPost,.personOrgName {
+  font-size: 32rpx;
+  width: auto;
+  max-width: 25%;
+  margin-left:10rpx;
+}
+.personOrgName {
+max-width: 60%;
+margin-left:0rpx;
+}
+.focusCard {
+  width: 100%;
+
+  /* display: flex; */
+  /*justify-content: space-between;*/
+  /* align-items: center; */
+  padding: 35rpx 35rpx 20rpx;
+  box-sizing: border-box;
+ color:#999;
+  text-align: center;
+  font-size: 30rpx;
+}
+.focusCard .card{color:#5095FA;font-weight: 500;}
+.focusButton {
+  width: 118rpx;
+  height: 55rpx;
+  color: #5095FA;
+  border: 1px solid #5095FA;
+  border-radius: 8rpx;
+  line-height: 55rpx;
+  text-align: center;
+  background: #fff;
+}
+
+.delImage {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+
+.icon {
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 20rpx;
+}
+
+.personMsg {
+  width: 90%;
+}
+
+.personCard {
+  width: 100%;
+  min-height: 440rpx;
+  margin-top: 20rpx;
+  padding: 24rpx 42rpx;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(178, 178, 178, 0.40);
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.personCard view {
+  margin-top: 20rpx;
+}
+
+.baseMsg {
+  margin-bottom: 50rpx;
+}
+
+.baseView {
+  width: 80%;
+}
+
+.code {
+  position: absolute;
+  top: 10rpx;
+  right: 12rpx;
+  width: 197rpx;
+  height: 197rpx;
+}
+
+.codeImage {
+  width: 197rpx;
+  height: 197rpx;
+}
+
+.avatarImage {
+  position: absolute;
+  top: 53rpx;
+  right: 52rpx;
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: 50%;
+}
+
+.baseContent {
+  display: flex;
+}
+
+.changeButton {
+  position: absolute;
+  bottom: 24rpx;
+  right: 30rpx;
+}
+
+.changeIcon {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.hot {
+  width: 90%;
+  height: 45rpx;
+  display: flex;
+  color: #999;
+  margin-top: 20rpx;
+}
+
+.hot>navigator {
+  height: 45rpx;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.hotIcon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+.footerContent {
+  width: 100%;
+  position: fixed;
+  left: 0rpx;
+  bottom: 10rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 32rpx;
+}
+
+.shareButton{
+  width: 90%;
+  height: 98rpx;
+  margin-top: 26rpx;
+  margin-left: 5%;
+  text-align: center;
+  line-height: 98rpx;
+  color: #fff;
+  background: #5095FA;
+  border-radius: 8rpx;
+  border: 1px solid rgba(5, 5, 5, 0.08);
+}
+.shareView{
+    width:100%;
+    position: relative;
+}
+.shareTop{
+    position: absolute;
+    width: 90%;
+    height: 98rpx;
+    background:transparent;
+    left:5%;
+    bottom:0rpx;
+    z-index:2 
+}
+.noReadCon {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.relatv {
+  position: relative;
+}
+
+.noReadCon .noReadicons {
+  position: absolute;
+  width: 15rpx;
+  height: 15rpx;
+  background: red;
+  border-radius: 50%;
+  left: 16rpx;
+}
+.showMaster{position:fixed;top:0;left:0;width:100%;height:100%;bottom:0;z-index: 99;background:rgba(0,0,0,0.8);}
+.showMaster image{width:600rpx;position: absolute;top:20rpx;right:40rpx;}
+
+.test{
+    width:100%;
+    height:300rpx;
+}

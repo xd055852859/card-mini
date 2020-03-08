@@ -1,0 +1,40 @@
+/**index.wxss**/
+.container{width:100%;height:100%}
+.backgroundImg{
+  position:absolute;
+  z-index: -1;
+  top:480rpx;
+  width:388rpx;
+  height:593rpx;
+  left:0
+}
+.homeLogo{
+  height:245rpx;
+  width:245rpx;
+  margin-top:200rpx;
+}
+.cardName{
+  height:100rpx;
+  /*border:4rpx solid rgb(255,215,0);*/
+  line-height: 100rpx;
+  text-align: center;
+  margin-top:200rpx;
+  border-radius:10px;
+  font-size:35px;
+  color:#B8B8B8;
+}
+
+.cardBottom{
+  position:fixed;
+  display: block;
+  bottom:40rpx;
+  text-align: center;
+  width:100%;
+  font-size:15px;
+}
+.cardBottom text{
+  display:block;
+  color:#B8B8B8;
+  font-size:14px;
+  margin-top:10rpx;
+}

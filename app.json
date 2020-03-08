@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/card/index",
+    "pages/card/search",
+    "pages/index/index",
+    "pages/card/details",
+    "pages/group/groupDetail",
+    "pages/fav/index",
+    "pages/index/newCard",
+    "pages/index/msgCenter",
+    "pages/index/newItem",
+    "pages/index/createCard",
+    "pages/index/insterest",
+    "pages/index/cardInfo",
+    "pages/message/list",
+    "pages/group/outMember",
+    "pages/group/changeMaster",
+    "pages/group/groupSet",
+    "pages/group/group",
+    "pages/authorize/index",
+    "pages/index/share"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#37363D",
+    "navigationBarTitleText": "亲友名片",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "backgroundColor": "#F9F9F9",
+    "color": "#7F8389",
+    "borderStyle": "black",
+    "selectedColor": "#5095FA",
+    "list": [
+      {
+        "pagePath": "pages/card/index",
+        "text": "名片夹",
+        "iconPath": "images/mycard.png",
+        "selectedIconPath": "images/mycardactive.png"
+      },
+      {
+        "pagePath": "pages/group/group",
+        "text": "微信群",
+        "iconPath": "images/group.png",
+        "selectedIconPath": "images/groupactive.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/myactive.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "sitemapLocation": "sitemap.json"
+}

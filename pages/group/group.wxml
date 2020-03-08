@@ -1,0 +1,39 @@
+<!--pages/card/group.wxml-->
+<view class='masterCover'  wx:if="{{showMaster}}"></view>
+<view class="container">
+    <block wx:if="{{initState==0}}">
+        <view class="initTitle">微信群组专属通讯录</view>
+        <view class="initMsg">群成员名片快速收集，私密又安全</view>
+        <view class="emptyView">
+            <image class="emptyImage" src="../../images/emptyGroup.png"></image>
+            <text class="emptyText">暂无群组~</text>
+        </view>
+        <block wx:if="{{testState}}">
+            <view class="shareTop" bindtap="testCard"></view>
+        </block>
+        <button open-type="share" plain="true">微信群通讯录</button>
+    </block>
+    <block wx:else>
+        <view class="createView">
+            <button open-type="share" plain="true">创建微信群通讯录</button>
+        </view>
+        <view class="groupContent">
+            <block wx:for="{{groupArray}}">
+                <view class="group" bindtap="toGroupDetail" data-gid="{{item.gId}}">
+                    <view class="groupImage {{item.icon.length!=1?'flex2':'flex1'}}">
+                        <block wx:for="{{item.icon}}" wx:for-item="itemValue">
+                            <view class="iconView {{item.icon.length==9?'flex4':'flex3'}}">
+                                <image src="{{itemValue}}" class="groupIcon {{item.icon.length==1?'icon1':(item.icon.length==4?'icon2':'icon3')}}" mode="aspectFill"></image>
+                            </view>
+                        </block>
+                    </view>
+                    <!-- <image class="groupImage" src="../../images/groupDefault.png"></image> -->
+                    <view class="groupMsg">
+                        <open-data class="groupName" open-gid="{{item.gId}}" type="groupName"></open-data>
+                        <view class="groupNum">{{item.memberSum}}人</view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </block>
+</view>

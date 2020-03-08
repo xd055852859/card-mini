@@ -1,0 +1,18 @@
+<!--pages/group/changeMaster.wxml-->
+<view class="container">
+    <view class="groupContent">
+        <block wx:for="{{groupMemberList}}">
+            <view class="group" bindtap="chooseMaster" data-userid="{{item.userKey}}" data-id="{{index}}">
+                <image class="groupImage" src="{{item.avatar}}" mode="aspectFill"></image>
+                <view class="groupMsg">
+                    <view class="groupName">{{item.nickName}}</view>
+                    <view class="groupNum">{{item.mainCard.itemContent.orgName}} {{item.mainCard.itemContent.post}}</view>
+                </view>
+                <block wx:if="{{item.state}}">
+                    <image class="chooseIcon" src="../../images/right.png"></image>
+                </block>
+            </view>
+        </block>
+    </view>
+    <view class="editButton" bindtap="saveMaster">移交权限</view>
+</view>

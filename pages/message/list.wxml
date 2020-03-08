@@ -1,0 +1,27 @@
+<!--pages/message/list.wxml-->
+<view class='cardCon'>
+<!-- each -->
+<view class='eachCon' bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='touchEnd' wx:for="{{dataList}}" wx:key="*this"  data-index="{{item.c._key}}">
+<view class='eachitems'  style='{{item.styleTxt}}' >
+ <navigator  url='/pages/card/details?targetUKey={{item.c.fromUKey}}' class='navgt' >
+    
+    <view class='header'><image src='{{item.avatar}}' mode='aspectFill'></image></view>
+    <view class='details'>
+      <view class='dis'>
+        <text class='name'>{{item.nickName}}</text> 递来名片
+      </view>
+       <view class="com">{{item.mainCard.itemContent.orgName}}<text class='pos'>{{item.mainCard.itemContent.post}}</text></view>
+     </view>
+  </navigator>
+   <view wx:if="{{item.c.status==0&&item.isMeCollectT==0}}"  class='iconsChange' data-id="{{item.c.fromUKey}}" catchtap='backCardHanlder'>回递</view>
+   <view wx:if="{{item.c.status==1}}"  class='iconsSolve' data-id="{{item.c.fromUKey}}" catchtap='backCardHanlder'>已处理</view> 
+</view>
+  <view class='noRead' wx:if="{{item.c.isRead==0}}"></view>
+<view class='btnDel' bindtap='deleteHanlder' data-index="{{item.c._key}}">删除</view>
+ </view>
+<!-- each over -->
+  <view class='noDataCon' wx:if="{{dataList.length==0}}">
+    <image class='tipImg' src="../../images/nodata.png"></image>
+    <view>消息中心暂无消息~</view>
+  </view>
+</view>

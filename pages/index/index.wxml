@@ -1,0 +1,63 @@
+<view class='masterCover'  wx:if="{{showMaster}}"></view>
+<view class="container">
+    <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="test"> </button> -->
+    <view class="personMsg" bindtap="{{userInfo.user?'toCardInfo':''}}">
+        <view class="personCard">
+            <view class="baseMsg">
+                <view class="nameView">
+                    <view class="personName">{{userInfo.user.nickName?userInfo.user.nickName:"姓名"}}</view>
+                    <view class="personPost">{{userInfo.cards['1000'].itemContent.post?userInfo.cards['1000'].itemContent.post:"暂无职位信息"}}</view>
+                </view>
+                <view class="personOrgName">{{userInfo.cards['1000'].itemContent.orgName?userInfo.cards['1000'].itemContent.orgName:"暂无公司信息"}}</view>
+                <!-- <view class="code">
+            <image src="{{userInfo.user.originQRCodeURL}}" class="codeImage"></image>
+        </view> -->
+                <view class="code">
+                    <image src="{{userInfo.user.originQRCodeURL}}" class="codeImage" mode="aspectFill"></image>
+                    <image src="{{userInfo.user.avatar}}" class="avatarImage" mode="aspectFill"></image>
+                </view>
+            </view>
+            <view class="baseView">
+                <view>
+                    <image class="icon" src="../../images/phone.png" mode="widthFix" />{{userInfo.cards['1'].itemContent.value?userInfo.cards['1'].itemContent.value:"暂无联系方式"}}</view>
+                <view>
+                    <image class="icon" src="../../images/email.png" mode="widthFix" />{{userInfo.cards['2'].itemContent.value?userInfo.cards['2'].itemContent.value:"暂无邮箱地址"}}</view>
+                <view>
+                    <image class="icon" src="../../images/position.png" mode="widthFix" />{{userInfo.cards['4'].itemContent.value?userInfo.cards['4'].itemContent.value:"暂无详细地址"}}</view>
+            </view>
+            <view class="changeButton" catchtap="modifyCard">
+                <image src="../../images/edit.png" class="changeIcon"></image>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="footerContent">
+    <view class="hot">
+        <navigator url='/pages/fav/index' class='noReadCon'>
+            <image src="../../images/collect.png" class="hotIcon"></image>收藏 {{favCount}}</navigator>
+        <navigator url='/pages/message/list' class='noReadCon'>
+            <view class='relatv'>
+                <view class='noReadicons' wx:if="{{noReadCount>0}}"></view>
+                <image src="../../images/msg.png" class="hotIcon"></image>
+                未读 {{noReadCount}}
+            </view>
+        </navigator>
+    </view>
+    <view class="shareView">
+        <block wx:if="{{testState}}">
+            <view class="shareTop" bindtap="testCard"></view>
+        </block>
+        <view class="shareButton" bindtap="toShare">发到微信群</view>
+    </view>
+     <block >
+         <view class="focusCard">
+            <!-- <image src="../../images/del.png" class="delImage" bindtap="delFocus" /> -->
+            <view>关注<text class='card' bindtap='shareCodeHanlder'>亲友名片</text>,不再错过重要信息。</view>
+            <!-- <view class="focusButton">关注</view>  -->
+        </view>
+    </block>
+</view>
+<view class='showMaster' wx:if="{{focusState}}" bindtap='hideMasterHanlder'>
+<image src="../../images/sharepublic.png"  mode='widthFix'  />
+<view class='master'></view>
+</view>

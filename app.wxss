@@ -1,0 +1,28 @@
+/**app.wxss**/
+page{
+  font-family:'.PingFangSC-Regular  ';
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+tabBar{
+  font-size:20px;
+}
+
+.backView {
+    background-color: rgba(0, 0, 0, 0.34);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.masterCover{background: #fff;position: fixed;z-index: 99;width:100%;height:100%}

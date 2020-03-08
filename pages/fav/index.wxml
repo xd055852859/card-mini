@@ -1,0 +1,25 @@
+<!--pages/fav/index.wxml-->
+<view class='cardCon'>
+<view class='eachitems' wx:for="{{dataList}}" wx:key="*this">
+ <navigator  url='/pages/card/details?targetUKey={{item.d._key}}' class='navgt' >
+ <view class='header'><image src='{{item.d.avatar}}'  mode='aspectFill'></image></view>
+    
+    <view class='details'>
+      
+      <view class='dis'>
+        <view class='name'>{{item.d.nickName}}</view>
+        <view class='pos' wx:if="{{item.mainCard.itemContent.post}}">{{item.mainCard.itemContent.post}}</view>
+      </view>
+      <view class="com">{{item.mainCard.itemContent.orgName}}</view>
+     </view>
+  </navigator>
+   <view wx:if="{{item.isFriend==0}}" class='iconsChange' data-id="{{item.d._key}}" catchtap='changCardHanlder'>交换</view> 
+</view>
+ 
+
+  <view class='noDataCon' wx:if="{{dataList.length==0}}">
+    <image class='tipImg' src="../../images/nodata.png"></image>
+    <view>收藏亲友名片，更方便地找到他们~</view>
+  </view>
+</view>
+

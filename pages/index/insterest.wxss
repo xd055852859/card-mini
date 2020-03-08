@@ -1,0 +1,138 @@
+/* pages/index/insterest.wxss */
+page input {
+    max-height: 70rpx;
+}
+page{
+  height:100%;
+}
+
+.interestView {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30rpx;
+    font-size:30rpx;
+}
+
+.interestPart {
+    padding: 13rpx 0rpx;
+    margin: 12rpx 15rpx;
+    border-radius: 30rpx;
+    height: 4.6%;
+    flex: 0 0 20%;
+    position:relative;
+}
+
+.interestFont {
+    border: 1px solid #E5E5E5;
+    color: #6A6A6A;
+    text-align: center;
+}
+
+.checkInterest {
+    border: 1px solid #5F9DE5;
+    color: #fff;
+    background-color: #5095FA;
+    text-align: center;
+}
+
+.chooseView {
+    width: 100%;
+    margin-top: 20rpx;
+}
+
+.chooseFont {
+    background-color:#5095FA;
+    display: inline-block;
+    margin: 15rpx;
+    padding: 18rpx 20rpx;
+    color: #fff;
+    font-size: 24rpx;
+    width: 15%;
+    border-radius: 10rpx;
+    text-align: center;
+}
+
+.chooseInsterest {
+    max-width: 90rpx;
+    overflow: hidden;
+    text-overflow: clip;
+    float: left;
+}
+.delIcon{
+  width:30rpx;
+  height:30rpx;
+  position: absolute;
+  right:-10rpx;
+  top:-11rpx;
+}
+.addFont {
+    border: 1px solid #DCDCDC;
+    color: #fff;
+    background-color: #AEAEAE;
+    text-align: center;
+}
+
+/*弹出框*/
+.addView {
+    background-color: #fff;
+    position: absolute;
+    top: 323rpx;
+    left: 109rpx;
+    z-index: 3;
+    width: 70%;
+    height: 271rpx;
+    border-radius: 25rpx;
+    font-size: 34rpx;
+    overflow: hidden;
+}
+
+.addTitle {
+    display: inline-block;
+    color: #333;
+    width: 100%;
+    height: 108rpx;
+    line-height: 108rpx;
+    text-align: center;
+}
+
+.addInput {
+    padding: 0 30rpx;
+    height: 65rpx;
+    font-size: 32rpx;
+    margin-bottom: 25rpx;
+}
+
+.addInput input {
+    background-color: #F3F3F3;
+    height: 100%;
+    padding: 0 19rpx;
+}
+
+.addButton {
+    display: inline-block;
+    width: 49.5%;
+    color: #555;
+    border-top: 1px solid #F0F0F1;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+}
+
+.okButton {
+    color: #5095FA;
+    border-left: 1px solid #F0F0F1;
+}
+
+.editButton{
+  width:90%;
+  height:98rpx;
+  margin:20rpx 0;
+  text-align: center;
+  line-height:98rpx;
+  color: #fff;
+  background: #5095FA;
+  border-radius: 8rpx;
+  border: 2rpx solid rgba(5,5,5,0.08);
+}
